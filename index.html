@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Pavithra's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
+  <link rel="icon" href="./assets/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./assets/favicon.png" />
+</head>
+<body>
+  <nav id="desktop-nav">
+    <div class="logo">Pavithra Mohanraj</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#accomplishments">Achievements</a></li>
+        <li><a href="#high">Highlights</a></li>
+        <li><a href="#hobby">Hobby</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <!-- Fixed Mobile Navigation -->
+  <!-- HTML: Replace your current hamburger-nav section with this -->
+<nav id="hamburger-nav">
+  <div class="logo">Pavithra M</div>
+  <div class="hamburger-icon" onclick="toggleMobileMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+      <li><a href="#skills" onclick="closeMobileMenu()">Skills</a></li>
+      <li><a href="#experience" onclick="closeMobileMenu()">Experience</a></li>
+      <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+      <li><a href="#accomplishments" onclick="closeMobileMenu()">Achievements</a></li>
+      <li><a href="#high" onclick="closeMobileMenu()">Highlights</a></li>
+      <li><a href="#hobby" onclick="closeMobileMenu()">Hobby</a></li>
+      <li><a href="#contact" onclick="closeMobileMenu()">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+  
+  <section id="profile">
+    <div id="section__pic-container">
+      <img src="./assets/First_pic.jpg" alt="Pavithra.M's profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Pavithra M</h1>
+      <div class="section__text__pavi" id="dynamic-text">
+        Data Scientist
+      </div>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Pavithra_M_Resume.pdf')">
+          Download Resume
+        </button>
+        <button class="btn btn-color-2" onclick="window.open('./assets/Pavithra_M_Curriculum_Vitae.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/pavithra-mohanraj'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/Tech-savvyPavithra'" />
+        <img src="./assets/versaverse-logo.png" alt="My VersaVerse 360" class="icon"
+          onclick="location.href='https://versaverse360.blogspot.com/'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/Profile_pic.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>Fresher</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Tech Computer Science and Business Systems</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p>I'm Pavithra, a professional skilled in Data Science, Machine Learning, UI/UX Design, and MERN Full Stack Development. I specialize in creating data-driven solutions, designing intuitive user interfaces, and building efficient web applications.
+
+            With hands-on experience in machine learning, interactive dashboards, and full-stack development, I bridge the gap between technology and practical business applications. My background as a finance enthusiast further enhances my ability to integrate technical expertise with analytical insights.
+            
+            I am committed to continuous learning and enjoy working in collaborative, dynamic environments where I can innovate and solve complex problems.
+          </p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#skills'" />
+  </section>
+  <section id="skills">
+    <p class="section__text__p1">Know My</p>
+    <h1 class="title">Skills</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Data Scientist</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/PowerBI.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Power BI</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/EDA.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Exploratary Data Analysis(EDA)</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/ML.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Machine Learning(ML)</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/NLP.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Natural Language Processing(NLP)</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Webscraping.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Web Scraping</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/DL.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Deep Learning(DL)</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/SQL.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>SQL</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Python.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Python</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Full Stack Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/HTML.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Tailwind_CSS.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Bootstrap.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/JS.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Javascript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Reactjs.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>React.js</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Nodejs.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Node.js</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Expressjs.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Express.js</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Mongodb.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MongoDB</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/github.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>GitHub</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Version_Control.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Version Control</h3>
+                <p>Basic</p>
+              </div>
+            </article>
+            </div>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Others</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/C.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/C++.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>C++</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Java.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Java</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Figma.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Figma</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/GenAI.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Gen AI</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/Finace.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>Business & Finance Accumen</h3>
+                <p>Beginner</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  
+
+  <section id="experience">
+    <p class="section__text__p1">Take a Look at My</p>
+    <h1 class="title">Experience</h1>
+    
+    <section class="internships">
+        <div class="internship">
+            <h2>Data Science Intern</h2>
+            <pre>
+            <p><strong>Company:</strong> Brainovision Solutions Pvt Ltd</p>
+            <p><strong>Duration:</strong> Jan 2024 - Feb 2024 [2 months]</p>
+            <p><strong>Key Contributions:</strong></p>
+            </pre>
+            <ul>
+                <li>Assisted with data analysis tasks to draw meaningful insights.</li>
+                <li>Cleaned and organized large datasets for better accuracy and performance.</li>
+                <li>Created visualizations to interpret and communicate data findings effectively.</li>
+                <li>Learned and applied machine learning models to solve real-world problems.</li>
+            </ul>
+        </div>
+
+        <div class="internship">
+            <h2>Deep Learning Intern</h2>
+            <pre>
+            <p><strong>Company:</strong> National Small Industries 
+                            Corporation (NSIC) Pvt Ltd</p>
+            <p><strong>Duration:</strong> Feb 2024 - Feb 2024 [1 month]</p>
+            <p><strong>Key Contributions:</strong></p>
+            </pre>
+            <ul>
+                <li>Processed and analyzed 500,000+ data points, enhancing model training efficiency.</li>
+                <li>Fine-tuned predictive algorithms, reducing error rates by 15% and improving processing speed.</li>
+                <li>Optimized model performance for better accuracy and efficiency.</li>
+                <li>Worked with TensorFlow and PyTorch for training neural networks.</li>
+            </ul>
+        </div>
+
+        <div class="internship">
+          <h2>FullStack Developer Intern (MERN)</h2>
+          <pre>
+          <p><strong>Company:</strong> EY Global Delivery Services
+                            & AICTE</p>
+          <p><strong>Duration:</strong> Jul 2024 - Sep 2024 [3 months]</p>
+          <p><strong>Key Contributions:</strong></p>
+          </pre>
+          <ul>
+              <li>Developed and optimized React.js components, reducing page load times and improving site
+              responsiveness.</li>
+              <li>Refactored backend logic in Node.js and Express.js, decreasing API response time.</li>
+              <li>Integrated MongoDB databases and RESTful APIs, enhancing data retrieval efficiency.</li>
+              <li>Collaborated on UI/UX improvements, leading to a 25% increase in user engagement.</li>
+          </ul>
+      </div>
+    </section>
+
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+</section>
+
+
+  
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/MERN.jpg" alt="MERN To do List" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">MERN TO DO LIST</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/MERN-Todo-List'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://pavithras-todo-list.netlify.app/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/portfolio.jpg" alt="Pavithra's Portfolio" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Pavithra's Portfolio</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/Web_Development_Pavithra_Portfolio'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://pavithra-m-portfolio.netlify.app/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Tastecraft.jpg" alt="TasteCraft" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">TasteCraft</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/Data_Science-TasteCraft'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://drive.google.com/drive/folders/1v6gpIhfx4OoWHIVJ5WUjtyNIt_h46JGE?usp=sharing'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Transla.jpg" alt="TranslaAI" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">TranslaAI</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/TranslaAI'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://transla-ai-dwr8.onrender.com/'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/StarCoffee.png" alt="StarCoffee" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">StarCoffee</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/Figma-StarCoffee'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.figma.com/proto/i0SPC2EjojZ6Dm2Jy2BfVo/StarCoffee?node-id=0-1&t=u01Yi2sm7aYe5278-1'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/Travel.png" alt="Travel" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Travel</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/Figma-Travel'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://www.figma.com/proto/E0G6gBsRJ1eXWWFy9i7SEp/Travel?node-id=0-1&t=5CNX4idthjodxjmk-1'">
+              Live Demo
+            </button>
+          </div>  
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/blinkit.png" alt="Blinkit" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">Blinkit Business Analytics</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/PowerBI-BlinkIT'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='./assets/BlinkIT Dashboard PowerBI File.pbix'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+        <div class="details-container color-container">
+          <div class="article-container">
+            <img src="./assets/abc.png" alt="ABC Company Dashboard" class="project-img" />
+          </div>
+          <h2 class="experience-sub-title project-title">ABC SuperStore Dashboard</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/Tech-savvyPavithra/PowerBI-ABC-SuperStore'">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="location.href='./assets/ABC Dashboard PowerBI File.pbix'">
+              Live Demo
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#accomplishments'" />
+  </section>
+  <section id="accomplishments">
+    <p class="section__text__p1">View My</p>
+    <h1 class="title">Achievements</h1>
+    <div class="slider">
+      <div class="slides">
+        <!-- Slide 1 -->
+        <div class="slide">
+          <img src="./assets/hackmaddegon.JPG" alt="Image 1">
+          <div class="description">Participated in Hackmageddon 24 Hours at Rajalakshmi Engineering College; 
+                                  our team, Tech Buddy, advanced to the Top 6 out of 36 teams. Developed a 
+                                  Food Donating Web Application, earning a special prize along with ₹2000 cash prize.</div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="slide">
+          <img src="./assets/sih.jpg" alt="Image 2">
+          <div class="description">Participated in the Smart India Hackathon (SIH) Internal Hackathon as Team Tech Buddy, 
+                                   addressing the Smart Irrigation problem. Developed a hybrid hardware-software solution 
+                                   with an app interface for IoT sensor readings and an ML model for predictions. Secured 
+                                   Top 2 in the Hardware Domain out of 25 teams, winning ₹6000.</div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="slide">
+          <img src="./assets/hacksubmit.jpg" alt="Image 3">
+          <div class="description">We the Team Tech Buddy participated in the international-level 36-hour hackathon, Hack Summit 5.0 
+                                   at SRM IST as part of AARUUSH '24. We won the Sustainability Champion Award for our IoT-powered 
+                                   KIBO project, which addresses agricultural challenges, helping farmers achieve greater profitability 
+                                   and sustainability. We secured ₹10,000 for our impactful work in the Sustainability track.</div>
+        </div>
+        <div class="slide">
+          <img src="./assets/datasprint.png" alt="Image 4">
+          <div class="description">We the Team Tech Buddy won Data Sprint 2.0, a 24-hour AI Hackathon hosted by Sri 
+                                   Sai Ram Institute of Technology. We presented KIBO, an AI-powered IoT solution in agriculture, 
+                                   enhancing farmers' lives. Awarded ₹8,000 and a free internship opportunity, we're 
+                                   excited to continue our mission in AgriTech and AI.</div>
+        </div>
+        <div class="slide">
+          <img src="./assets/hack4purpose.jpg" alt="Image 5">
+          <div class="description">We the Team Tech Buddy was selected as one of the Top 100 finalists out of 8,500+ 
+                                   teams at the national-level Hack4Purpose hackathon, organized by the DPurpose Foundation 
+                                   and held at Anna University Chennai. We were also shortlisted in the Top 50 during the further 
+                                   idea presentation! This event centered on Entrepreneurship, and we're excited for what's ahead!</div>
+        </div>
+      </div>
+    </div>
+  <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#high'" />
+  </section>
+  <div id="high">
+    <p class="section__text__p1">Find My</p>
+    <h2 class="title">Highlights</h2>
+  </div>
+  <section id="highlights">
+    <div class="highlights-container">
+      <a href="https://www.hackerrank.com/profile/P221401058" target="_blank" class="highlight-item">
+        <img src="assets/hackerrank.png" alt="HackerRank">
+        <p>HackerRank</p>
+      </a>
+      <a href="https://leetcode.com/u/Tech-savvyPavithra/" target="_blank" class="highlight-item">
+        <img src="assets/leetcode.png" alt="LeetCode">
+        <p>LeetCode</p>
+      </a>
+      <a href="https://www.credly.com/users/pavithra-m-techsavvy/edit" target="_blank" class="highlight-item">
+        <img src="assets/credly.svg" alt="Credly">
+        <p>Credly</p>
+      </a>
+      <a href="https://www.oracle.com/" target="_blank" class="highlight-item">
+        <img src="assets/oracle.png" alt="Oracle">
+        <p>Oracle</p>
+      </a>
+      <a href="https://drive.google.com/drive/folders/16rPlCPtdy2FVws_AXMdU9zcvHFQPqcuS?usp=sharing" target="_blank" class="highlight-item">
+        <img src="assets/certificate.png" alt="Certifications">
+        <p>Certifications</p>
+      </a>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#hobby'" />
+  </section>
+  <section id="hobby">
+    <p class="section__text__p1">Check Out My</p>
+    <h1 class="title">Digital Creator Journey</h1>
+    <div class="hobby-container">
+      <div class="hobby-content">
+        <div class="hobby-logo">
+          <img src="./assets/versaverse-logo.png" alt="VersaVerse360 Logo" />
+        </div>
+        <div class="hobby-description">
+          <h2>VersaVerse360</h2>
+          <p>Constantly vibing in the multiverse of creativity! As a Gen Z digital explorer, I'm all about pushing boundaries and serving content that's straight-up fire 🔥. From tech deep-dives to lifestyle hacks, my digital playground is where curiosity meets the internet. Not just creating content — I'm building a whole vibe. No cap!</p>
+        </div>
+      </div>
+      <div class="hobby-socials">
+        <div class="hobby-social-item">
+          <img src="./assets/gmail.png" alt="Gmail Icon" class="hobby-icon" />
+          <p><a href="mailto:versaverse360@gmail.com">versaverse360@gmail.com</a></p>
+        </div>
+        <div class="hobby-social-item">
+          <img src="./assets/youtube.png" alt="YouTube Icon" class="hobby-icon" />
+          <p><a href="https://www.youtube.com/@VersaVerse360" target="_blank">YouTube Channel</a></p>
+        </div>
+        <div class="hobby-social-item">
+          <img src="./assets/instagram.png" alt="Instagram Icon" class="hobby-icon" />
+          <p><a href="https://www.instagram.com/versaverse360?igsh=MTRuenM1ZG9mNnZ0bw==" target="_blank">Instagram Page</a></p>
+        </div>
+        <div class="hobby-social-item">
+          <img src="./assets/blog.png" alt="Blog Icon" class="hobby-icon" />
+          <p><a href="https://versaverse360.blogspot.com/" target="_blank">Blog Page</a></p>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon" />
+        <p><a href="mailto:pavithramohanraj05@gmail.com">pavithramohanraj05@gmail.com</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/pavithra-mohanraj">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/phone.png" alt="Phone icon" class="icon contact-icon" />
+        <p><a href="tel:+919042248181">Call me On</a></p>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#accomplishments">Achievements</a></li>
+          <li><a href="#highlights">Highlights</a></li>
+          <li><a href="#hobby">Hobby</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <p>Copyright &#169; 2024 Pavithra M. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script> 
+</body> 
+</html>
