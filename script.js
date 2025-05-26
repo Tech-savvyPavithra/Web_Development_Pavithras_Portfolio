@@ -460,3 +460,125 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
   });
+
+  // Certifications Slideshow
+const certSlides = document.querySelector('.cert-slides');
+const certSlideItems = document.querySelectorAll('.cert-slide');
+const certPrevBtn = document.querySelector('.cert-prev');
+const certNextBtn = document.querySelector('.cert-next');
+let currentCertSlide = 0;
+const maxCertSlides = certSlideItems.length;
+
+function updateCertSlide() {
+  certSlides.style.transform = `translateX(-${currentCertSlide * 100}%)`;
+}
+
+certNextBtn.addEventListener('click', () => {
+  currentCertSlide = (currentCertSlide + 1) % maxCertSlides;
+  updateCertSlide();
+});
+
+certPrevBtn.addEventListener('click', () => {
+  currentCertSlide = (currentCertSlide - 1 + maxCertSlides) % maxCertSlides;
+  updateCertSlide();
+});
+
+// Touch support for mobile
+let touchStartX = 0;
+let touchEndX = 0;
+
+certSlides.addEventListener('touchstart', e => {
+  touchStartX = e.changedTouches[0].clientX;
+}, {passive: true});
+
+certSlides.addEventListener('touchend', e => {
+  touchEndX = e.changedTouches[0].clientX;
+  handleCertSwipe();
+}, {passive: true});
+
+function handleCertSwipe() {
+  const swipeThreshold = 50;
+  if (touchEndX < touchStartX - swipeThreshold) {
+    currentCertSlide = (currentCertSlide + 1) % maxCertSlides;
+    updateCertSlide();
+  } else if (touchEndX > touchStartX + swipeThreshold) {
+    currentCertSlide = (currentCertSlide - 1 + maxCertSlides) % maxCertSlides;
+    updateCertSlide();
+  }
+}
+
+// Add this to your existing script.js
+function handleNavbarResize() {
+    const desktopNav = document.getElementById('desktop-nav');
+    if (window.innerWidth < 1200) {
+      desktopNav.style.padding = '1rem 3%';
+    } else {
+      desktopNav.style.padding = '1rem 5%';
+    }
+  }
+  
+  // Call on load and resize
+  window.addEventListener('load', handleNavbarResize);
+  window.addEventListener('resize', handleNavbarResize);
+
+  // Gallery Slider Functionality
+function setupGallerySliders() {
+  const sliders = document.querySelectorAll('.flip-slider');
+  
+  sliders.forEach(slider => {
+    const container = slider.closest('.flip-slider-container');
+    const prevBtn = container.querySelector('.flip-slider-prev');
+    const nextBtn = container.querySelector('.flip-slider-next');
+    const slides = slider.querySelectorAll('.flip-slide');
+    let currentIndex = 0;
+    
+    // Function to update slider position
+    function updateSlider() {
+      const slideWidth = slides[0].offsetWidth + 20; // Include gap
+      slider.scrollTo({
+        left: currentIndex * slideWidth,
+        behavior: 'smooth'
+      });
+    }
+    
+    // Previous button click
+    prevBtn.addEventListener('click', () => {
+      currentIndex = Math.max(0, currentIndex - 1);
+      updateSlider();
+    });
+    
+    // Next button click
+    nextBtn.addEventListener('click', () => {
+      currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+      updateSlider();
+    });
+    
+    // Touch/swipe support
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    slider.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].clientX;
+    }, {passive: true});
+    
+    slider.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].clientX;
+      handleSwipe();
+    }, {passive: true});
+    
+    function handleSwipe() {
+      const swipeThreshold = 50;
+      if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left - next slide
+        currentIndex = Math.min(slides.length - 1, currentIndex + 1);
+      } else if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right - previous slide
+        currentIndex = Math.max(0, currentIndex - 1);
+      }
+      updateSlider();
+    }
+  });
+}
+
+// Call this function when DOM is loaded
+document.addEventListener('DOMContentLoaded', setupGallerySliders);

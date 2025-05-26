@@ -865,3 +865,141 @@ section {
     margin-top: 80px;
   }
 }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .flip-gallery-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .flip-card {
+    height: 220px;
+  }
+
+  .category-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-gallery-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .flip-slide {
+    flex: 0 0 calc(50% - 15px);
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flip-slide {
+    flex: 0 0 100%;
+    min-width: 280px;
+  }
+  
+  .flip-slider-container {
+    padding: 0 30px;
+  }
+  
+  .flip-slider-prev,
+  .flip-slider-next {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .nav-links {
+    gap: 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #desktop-nav {
+    display: none; /* Hide desktop nav on smaller screens */
+  }
+}
+
+/* Add this to the media queries for mobile devices */
+@media screen and (max-width: 768px) {
+  .cert-prev, .cert-next {
+    top: 60%; /* Adjust this value to center with the slide content */
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .cert-prev, .cert-next {
+    top: 50%; /* Center vertically with the image */
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+  
+  .cert-slide img {
+    max-height: 300px; /* Reduce image height for better mobile display */
+  }
+  
+  .cert-details {
+    padding: 0 10px;
+  }
+  
+  .cert-details h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Tablet View Adjustments (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .cert-slider {
+    min-height: 450px; /* Slightly smaller height for tablets */
+  }
+
+  .cert-slide {
+    min-height: 450px;
+    padding: 15px;
+  }
+
+  .cert-prev, .cert-next {
+    top: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+
+  .cert-slide img {
+    max-height: 350px; /* Adjust image size for tablet */
+  }
+
+  .cert-details h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .cert-details p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+  }
+
+  .verify-btn {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+  }
+}

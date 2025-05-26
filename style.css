@@ -32,9 +32,16 @@ nav {
   height: 17vh;
 }
 .nav-links {
-  gap: 2rem;
+  display: flex;
+  gap: 1.5rem;
   list-style: none;
-  font-size: 1.0rem;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  flex-wrap: nowrap; /* Ensure items don't wrap */
+}
+.nav-links li {
+  display: inline-block; /* Keep items in line */
 }
 a {
   color: black;
@@ -698,16 +705,24 @@ section#accomplishments{
   color: white;
 }
 
+/* DESKTOP NAV */
 #desktop-nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Ensures the navbar stays on top of other content */
-  background-color: white; /* Prevents navbar from blending with the page content */
-  width: 100%; /* Ensures full-width navigation */
-  padding: 0rem 0; /* Adds padding for spacing */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds shadow for separation from content */
+  z-index: 1000;
+  background-color: white;
+  width: 100%;
+  padding: 1rem 5%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  max-width: 100vw;
+  overflow-x: auto; /* Changed from hidden to auto */
+  white-space: nowrap; /* Prevent wrapping */
 }
 
 /* EXPERIENCE SECTION */
@@ -983,4 +998,262 @@ section#accomplishments{
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   display: none;
+}
+
+/* 3D Flip Gallery */
+.flip-gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.flip-card {
+  perspective: 1000px;
+  height: 250px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, 
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.flip-card-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-card-back {
+  background: rgb(250, 250, 250); /* Matching your light theme */
+  color: rgb(85, 85, 85); /* Matching your text color */
+  transform: rotateY(180deg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+}
+
+.flip-card-back h3 {
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+  color: black; /* Matching your title color */
+}
+
+.flip-card-back p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: rgb(85, 85, 85); /* Matching your text color */
+}
+
+.event-date {
+  background: rgba(0,0,0,0.1);
+  padding: 5px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  align-self: center;
+  color: rgb(85, 85, 85);
+}
+
+/* Flip Card Slider */
+.flip-slider-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.flip-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  gap: 20px;
+  padding: 20px 0;
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.flip-slider::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome/Safari */
+}
+
+.flip-slide {
+  scroll-snap-align: start;
+  flex: 0 0 calc(33.333% - 13.333px);
+  min-width: 300px;
+  height: 250px;
+}
+
+.flip-slider-prev,
+.flip-slider-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flip-slider-prev:hover,
+.flip-slider-next:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.flip-slider-prev {
+  left: 0;
+}
+
+.flip-slider-next {
+  right: 0;
+}
+
+/* Gallery Section Styles */
+.gallery-category {
+  margin-bottom: 80px;
+  margin-top: 40px;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  color:grey;
+  text-align:center;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+  text-decoration: underline; /* Added underline */
+  text-decoration-color: black; /* Black underline */
+  text-underline-offset: 8px;
+}
+
+.category-title::after {
+  display: none;
+}
+/* Certifications Slideshow */
+#certifications {
+  padding: 60px 0;
+}
+
+.cert-slider {
+  position: relative;
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cert-slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.cert-slide {
+  min-width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cert-slide img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border: 1px solid #eee;
+  margin-bottom: 20px;
+}
+
+.cert-details {
+  text-align: center;
+  padding: 0 20px;
+}
+
+.cert-details h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.cert-details p {
+  color: #7f8c8d;
+  margin-bottom: 15px;
+}
+
+.verify-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+.verify-btn:hover {
+  background: grey;
+  color: #000;
+}
+
+.cert-prev, .cert-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.cert-prev:hover, .cert-next:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.cert-prev {
+  left: 20px;
+}
+
+.cert-next {
+  right: 20px;
 }
