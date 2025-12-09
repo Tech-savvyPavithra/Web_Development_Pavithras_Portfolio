@@ -1257,3 +1257,11 @@ section#accomplishments{
 .cert-next {
   right: 20px;
 }
+
+.logo-circle {
+  width: 32px;          /* set any size you want */
+  height: 32px;         /* same as width for a perfect circle */
+  border-radius: 50%;   /* makes it circular */
+  object-fit: cover;    /* keeps image from stretching */
+}
+
